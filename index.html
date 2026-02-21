@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExposeFact — One Myth Busted Every Day</title>
+  <meta name="description" content="A different myth busted every day. Health, history, science, food, animals — the things you think you know, exposed." />
+  <meta name="keywords" content="myth busting, fact check, common myths, debunked, misconceptions, is it true" />
+  <link rel="canonical" href="https://exposefact.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ExposeFact — One Myth Busted Every Day" />
+  <meta property="og:description" content="A different myth busted every day. Health, history, science, food, animals — the things you think you know, exposed." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://exposefact.com/" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ExposeFact",
+    "description": "Daily myth-busting site covering health, history, science, food, and animals.",
+    "url": "https://exposefact.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://exposefact.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500&family=Lora:ital,wght@0,600;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Prevent flash of wrong theme -->
+  <script>
+    (function(){var t=localStorage.getItem('ef-theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}})();
+  </script>
+
+  <!-- AdSense — replace publisher ID when approved -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="/">Expose<span>Fact</span></a>
+  <ul class="nav-links">
+    <li><a href="/?cat=health">Health</a></li>
+    <li><a href="/?cat=history">History</a></li>
+    <li><a href="/?cat=science">Science</a></li>
+    <li><a href="/?cat=food">Food</a></li>
+    <li><a href="/?cat=animals">Animals</a></li>
+  </ul>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+</nav>
+
+<!-- HERO: TODAY'S MYTH -->
+<div class="page">
+  <section class="hero-section">
+    <div class="hero-eyebrow">Today's Myth — <span id="today-date"></span></div>
+    <div class="hero-card" id="hero-card">
+      <div class="hero-meta">
+        <span class="verdict" id="hero-verdict"></span>
+        <span class="cat-pill" id="hero-cat"></span>
+      </div>
+      <div class="hero-claim" id="hero-claim"></div>
+      <div class="hero-truth" id="hero-truth"></div>
+      <div class="hero-why">
+        <strong>Why people believe it:</strong> <span id="hero-why"></span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn" id="hero-link" href="#">Read full myth →</a>
+        <button class="share-btn" onclick="shareMyth()">Share today's myth</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- AD SLOT -->
+  <div class="ad-slot">AdSense — 728×90 leaderboard</div>
+
+  <!-- CATEGORY FILTER -->
+  <div class="section-header">
+    <span class="section-title">Browse myths</span>
+  </div>
+  <div class="cat-filter-bar" id="cat-filter-bar"></div>
+
+  <!-- MYTH GRID -->
+  <div class="myth-grid" id="myth-grid"></div>
+
+  <!-- AD SLOT -->
+  <div class="ad-slot">AdSense — 300×250 rectangle</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© <span id="footer-year"></span> ExposeFact &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; One myth exposed, every day.</p>
+</footer>
+
+<script src="js/myths.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

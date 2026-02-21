@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">ExposeFact</title>
+  <meta name="description" id="page-desc" content="" />
+  <link rel="canonical" id="page-canonical" href="https://exposefact.com/myth.html" />
+
+  <!-- Open Graph (filled by JS) -->
+  <meta property="og:title" id="og-title" content="" />
+  <meta property="og:description" id="og-desc" content="" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" id="og-url" content="" />
+
+  <!-- Structured Data filled by JS -->
+  <script id="ld-json" type="application/ld+json">{}</script>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500&family=Lora:ital,wght@0,600;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Prevent flash of wrong theme -->
+  <script>
+    (function(){var t=localStorage.getItem('ef-theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}})();
+  </script>
+
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="/">Expose<span>Fact</span></a>
+  <ul class="nav-links">
+    <li><a href="/?cat=health">Health</a></li>
+    <li><a href="/?cat=history">History</a></li>
+    <li><a href="/?cat=science">Science</a></li>
+    <li><a href="/?cat=food">Food</a></li>
+    <li><a href="/?cat=animals">Animals</a></li>
+  </ul>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+</nav>
+
+<div class="page">
+  <div class="myth-page" id="myth-page">
+
+    <a class="back-link" href="/">← Back to all myths</a>
+
+    <!-- Header -->
+    <div class="myth-page-header">
+      <div class="myth-page-meta">
+        <span class="verdict" id="m-verdict"></span>
+        <span class="cat-pill" id="m-cat"></span>
+        <span style="font-size:1.5rem" id="m-emoji"></span>
+      </div>
+      <h1 class="myth-page-claim" id="m-claim"></h1>
+    </div>
+
+    <!-- Ad slot -->
+    <div class="ad-slot">AdSense — 728×90 leaderboard</div>
+
+    <!-- The truth -->
+    <div class="myth-verdict-block">
+      <div class="verdict-label">The Truth</div>
+      <div class="verdict-text" id="m-truth"></div>
+    </div>
+
+    <!-- Why believed -->
+    <div class="why-block">
+      <strong>Why people believe it:</strong> <span id="m-why"></span>
+    </div>
+
+    <!-- Ad slot -->
+    <div class="ad-slot">AdSense — 300×250 rectangle</div>
+
+    <!-- Footer actions -->
+    <div class="myth-page-footer">
+      <a class="back-link" href="/" style="margin:0">← All myths</a>
+      <button class="share-btn" onclick="shareMythPage()">Share this myth</button>
+    </div>
+
+    <!-- Related myths -->
+    <div class="related-section">
+      <div class="related-title">More myths in this category</div>
+      <div class="myth-grid" id="related-grid"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© <span id="footer-year"></span> ExposeFact &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; One myth exposed, every day.</p>
+</footer>
+
+<!-- Not found state (hidden by default) -->
+<div id="not-found" style="display:none; text-align:center; padding:6rem 1rem; color:#7a756c;">
+  <div style="font-size:3rem; margin-bottom:1rem;">🤔</div>
+  <div style="font-family:monospace; font-size:1rem; margin-bottom:1rem;">Myth not found.</div>
+  <a href="/" style="color:#1d4ed8; font-family:monospace; font-size:0.85rem;">← Back to home</a>
+</div>
+
+<script src="js/myths.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/myth.js"></script>
+</body>
+</html>
